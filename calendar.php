@@ -58,7 +58,7 @@ error_reporting(0);
 	  <?php
 	  
 	  include('header.php');
-	  include('dsidebar.php');
+	  include('sidebar.php');
 	  
 	  
 	  ?>

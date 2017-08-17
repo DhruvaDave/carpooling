@@ -51,7 +51,7 @@ error_reporting(0);
   </head>
 <body>
 <footer class="Footer bg-dark dker">
-      <p>2015 &copy; Dhruva  </p>
+      <p>2015 &copy; Dhruva  &amp; Bhavini</p>
     </footer><!-- /#footer -->
  <!--jQuery 2.1.1 -->
     <script src="assets/lib/jquery/jquery.min.js"></script>

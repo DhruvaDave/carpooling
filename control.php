@@ -1,68 +1,67 @@
 <?php
-
-include('model.php');
 error_reporting(0);
-session_start();
-$obj=new model();
-//show_passenger
-	 $i=$_SESSION["id"];
-	 $pass=$obj->pro($i);
+include('model.php');
+$obj=new model;
 
+//reg
+$re1=$obj->reg_fetch();
 
-//profile
-if(isset($_SESSION["id"]))
-{
-	$pr_id1=$_SESSION["id"];
-	$prof=$obj->pro1($pr_id1);
-	 
-			
-			
-			
-
-}
-
-
-//edit_profile
-
-if(isset($_REQUEST['eid']))
-{
-$pr_id = $_REQUEST['eid'];
-$f=$obj->pro1($pr_id1);
-}
+ //delete_reg
+  
+  if(isset($_REQUEST['did']))
+ {
+     
+	 $passenger_id=$_REQUEST['did'];
+	 $l1=$obj->delete_reg($passenger_id);
+	 //header('location:show_car1.php');
+ 
+ }
+ 
+ 
+ //car
+$re=$obj->car_fetch();
 
  
-   //update_pro
+ 
+  //delete_car
   
-  if(isset($_REQUEST['update']) && ($_REQUEST['eid']) )
-  {
-     $pr_id=$_REQUEST['eid'];
-    $f=$_REQUEST['fname'];
-	 $l=$_REQUEST['lname'];
-	 $t=$_REQUEST['tarea'];
-	 $n=$_REQUEST['no'];
-	 @$g=$_REQUEST['gen'];
-	 $e=$_REQUEST['email'];
-	 $p=$_REQUEST['password'];
-	 $cat=$_REQUEST['cat'];
-	 $c=$_REQUEST['country'];
-	 $s=$_REQUEST['state'];
-	 $city=$_REQUEST['city'];
-	 
-	  
-	$z=$obj->update_pro($f,$l,$t,$n,$g,$e,$p,$cat,$c,$s,$city,$pr_id);
-	
-	
-	header("location:profile.php?pr_id=$pr_id");
+  if(isset($_REQUEST['cardid']))
+ {
+     
+	 $car_id=$_REQUEST['cardid'];
+	 $l=$obj->delete_car($car_id);
+	 //header('location:show_car1.php');
+ 
+ }
+ 
+ //adv
+$adv1=$obj->adv_fetch();
+ 
+ 
+  //delete_adv
   
-  }
+  if(isset($_REQUEST['advdid']))
+ {
+     
+	 $adv_id=$_REQUEST['advdid'];
+	 $l=$obj->delete_adv($adv_id);
+	 //header('location:show_car1.php');
+ 
+ }
 
-  //country
-$re=$obj->sel_con();
+//select passenger
+$ps=$obj->p();
 
-//category
-
-$ca=$obj->cat_fetch();
-
-
-
+ //delete_passenger
+  
+  if(isset($_REQUEST['did']))
+ {
+     
+	 $passenger_id=$_REQUEST['did'];
+	 $j=$obj->delete_pas($passenger_id);
+	 //header('location:show_car1.php');
+ 
+ }
+ 
+ 
 ?>
