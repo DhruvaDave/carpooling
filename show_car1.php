@@ -1,6 +1,6 @@
 <?php
-
-include('header.php');
+include_once('control.php');
+include_once('header.php');
 error_reporting(0);
 
 ?>
@@ -57,7 +57,7 @@ error_reporting(0);
   <body class="  ">
   <?php
   
-  include('sidebar.php');
+  include('csidebar.php');
   
   ?>
     <div class="bg-dark dk" id="wrap">
@@ -70,30 +70,53 @@ error_reporting(0);
 
 <table id="dataTable" class="table table-bordered table-condensed table-hover table-striped">
                       <thead>
-                       
                       </thead>
                       <tbody>
                         
 						<tr>
-						<td>First Name </td>
-						<td> Last Name </td>
-						<td> Address </td>
-						<td> Phone </td>
-						<td> Gender </td>
-						<td> Email </td>
-						<td> Password </td>
-						<td> Birth Date </td>
-						<td> Category </td>
-						<td> Country </td>
-						<td> State </td>
-						<td> City </td>
-						<td> Edit </td>
-						<td> Delet </td>
+						<td> Name </td>
+						 
+						 
+						<td> Image </td>
+						
+						
+						<td> Feature </td>
+						<td> Source </td>
+						<td> Destination </td>
+						<td> Price</td>
+						<td><li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                  </li>  </td>
+						<td>  <li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-trash"></i>
+                  </li></td>
 						</tr>
-                       
+                       <?php
+					  foreach($res as $c)
+					  {
+						?>
+						
+					 <tr>
+					<td><?php echo $c['car_name']; ?></td>
+					  <td> <img src="<?php echo $c['car_image']; ?>" style="height:50px" width="100px"> </td>
+					   <td><?php echo $c['car_feature']; ?></td>
+					   <td><?php echo $c['car_source']; ?></td>
+					   <td><?php echo $c['car_destination']; ?></td>
+					    <td><?php echo $c['car_price']; ?></td>
+						<td> <a href="post_car.php?eid=<?php echo $c['car_id'] ?>">  <li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-pencil"></i> </li> </a>
+                  </li> </td>
+						<td> <a href="show_car1.php?did=<?php echo $c['car_id']; ?>"> <li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-trash"></i> </li> </a>
+                  </li></td>
+					 </tr>
+						<?php
+						
+					    }
+						
+						?>
                       </tbody>
                     </table>
-					
 					</div>
 					</div>
 					</div>

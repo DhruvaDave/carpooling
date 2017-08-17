@@ -1,14 +1,21 @@
 <?php
   include_once('control.php');
   error_reporting(0);
-  
+  //session_start();
   
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-
+<script type="text/javascript"src="js/jquery.min.js"></script>
 <script type="text/javascript">
+$(document).ready(function () {
+$("#b1").mouseover(function() {
+	
+	$("#form1").fadeIn("2000");
+	});
+
+});
    function showstate(str) 
   { 
     var xmlHttp; 
@@ -55,20 +62,15 @@
 	}
 </script>
 
-<style type="text/css">
-
-#r
-{
-color:#CC0033; 
-font-family:Forte;
-}
 
 
-</style>
 
 </head>
 
 <body  bgcolor="#666666" >
+<div id="b1">
+<!--<img src="images/gallery1.jpg" class="stretch" />-->
+</div>
 <center>
 <form id="form1" method="post" name="frm" >
 <div id="f">
@@ -78,21 +80,21 @@ font-family:Forte;
  <center><h1><b>Registration</b></h1> </center> </td>
  </tr>
  <tr>
-<td  >First Name</td><br><td><input type="text" name="fname"   placeholder="First Name" style="width:100%" value="<?php if(isset($_REQUEST['eid'])) { echo   $f['fname']; } ?> " /></td>
+<td  >First Name</td><br><td><input type="text" name="fname"   placeholder="First Name" style="width:100%" value="<?php if(isset($_REQUEST['eid1'])) { echo   $fq['fname']; } ?> " /></td>
 
 </tr>
 
 <tr>
 <td>Last Name</td>
-<td><input type="text" name="lname"  placeholder="Lirst Name" style="width:100%" value="<?php if(isset($_REQUEST['eid'])) { echo   $f['lname']; } ?> " /></td>
+<td><input type="text" name="lname"  placeholder="Lirst Name" style="width:100%" value="<?php if(isset($_REQUEST['eid'])) { echo   $fq['lname']; } ?> " /></td>
 </tr>
 
 <tr>
-<td>Address</td> <td><textarea rows="2" cols="16" name="tarea" placeholder="Address" style="width:100%" value="<?php if(isset($_REQUEST['eid'])) { echo   $f['address']; } ?> " > </textarea></td>
+<td>Address</td> <td><textarea rows="2" cols="16" name="tarea" placeholder="Address" style="width:100%" value="<?php if(isset($_REQUEST['eid'])) { echo   $fq['address']; } ?> " > </textarea></td>
 </tr>
 
 <tr> 
-<td>Phone No</td> <td><input class="form-control" type="text" name="no"  placeholder="Phone No." data-mask="(999) 999-9999" style="width:100%" value="<?php if(isset($_REQUEST['eid'])) {echo   $f['phoneno']; } ?> " ></td>
+<td>Phone No</td> <td><input class="form-control" type="text" name="no"  placeholder="Phone No." data-mask="(999) 999-9999" style="width:100%" value="<?php if(isset($_REQUEST['eid'])) {echo   $fq['phoneno']; } ?> " ></td>
 </tr>
 
 <tr>
@@ -104,12 +106,12 @@ font-family:Forte;
 
 <tr>
 <td>Email </td>
-<td><input type="email" name="email" placeholder="Email" value="<?php if(isset($_REQUEST['eid'])) { echo   $f['email']; } ?> "style="width:100%" ></td>
+<td><input type="email" name="email" placeholder="Email" value="<?php if(isset($_REQUEST['eid'])) { echo   $fq['email']; } ?> "style="width:100%" ></td>
 </tr>
 
 <tr>
 <td>Password </td>
-<td> <input type="password" name="password" placeholder="Password" style="width:100%"  value="<?php if(isset($_REQUEST['eid'])){ echo   $f['password'];} ?> " /> </td>
+<td> <input type="password" name="password" placeholder="Password" style="width:100%"  value="<?php if(isset($_REQUEST['eid'])){ echo   $fq['password'];} ?> " /> </td>
 </tr>
 
 <tr>
@@ -171,7 +173,7 @@ font-family:Forte;
 <center>
 <tr>
 
-						  <?php if(isset($_REQUEST['eid']))
+						  <?php if(isset($_REQUEST['eid1']))
                          {
                    ?>
 				   <center>  

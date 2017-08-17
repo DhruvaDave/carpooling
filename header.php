@@ -5,7 +5,7 @@ error_reporting(0);
 <html class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title>Car Pooling</title>
+    <title>CarPooling</title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -64,26 +64,32 @@ error_reporting(0);
                 <span class="icon-bar"></span> 
                 <span class="icon-bar"></span> 
                 <span class="icon-bar"></span>              </button>
-              
-                <img src="../logo/images (5).jpg" height="45">              </a>            </header>
+              <a href="index.html" class="navbar-brand">
+                <img src="../logo/images (5).jpg" alt="" height="55" width="100">              </a>            </header>
             
             <div class="collapse navbar-collapse navbar-ex1-collapse">
 
               <!-- .nav -->
               <ul class="nav navbar-nav">
-                <li> <a href="../forms1/home.php">Home</a>  </li>
-                
+                <li> <a href="post_car.php">Home</a>  </li>
+                <li> <a href="profile.php">Profile</a>  </li>
                 <li> <a href="contactus.php">Contact Us</a>  </li>
-				<li> <a href="../forms1/logout.php">Logout</a>  </li>
+				<li> <a href="logout.php">Logout</a>  </li>
               </ul><!-- /.nav -->
             </div>
           </div><!-- /.container-fluid -->
         </nav><!-- /.navbar -->
         <header class="head">
-          <!-- /.search-bar -->
+          <div class="search-bar">
+            <form class="main-search" action="">
+              <div class="input-group">
+                
+                              </div>
+            </form><!-- /.main-search -->
+          </div><!-- /.search-bar -->
           <div class="main-bar">
             <h3>
-              <i class="fa fa-home"></i>&nbsp; Car Pooling</h3>
+              <i class="fa fa-home"></i>&nbsp; CarPooling</h3>
           </div><!-- /.main-bar -->
         </header><!-- /.head -->
       </div><!-- /#top -->

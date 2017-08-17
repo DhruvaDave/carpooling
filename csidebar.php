@@ -5,7 +5,7 @@ error_reporting(0);
 <html class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title>Car Pooling</title>
+    <title></title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -49,11 +49,75 @@ error_reporting(0);
     <!--Modernizr 2.8.2-->
     <script src="assets/lib/modernizr/modernizr.min.js"></script>
   </head>
-<body>
-<footer class="Footer bg-dark dker">
-      <p>2015 &copy; Dhruva  </p>
-    </footer><!-- /#footer -->
- <!--jQuery 2.1.1 -->
+  <body class="  ">
+
+
+<div id="left">
+        <div class="media user-media bg-dark dker">
+          <div class="user-media-toggleHover">
+            <span class="fa fa-user"></span>          </div>
+          <div class="user-wrapper bg-dark">
+             
+            
+          </div>
+        </div>
+
+        <!-- #menu -->
+        <ul id="menu" class="bg-blue dker">
+          <li class="nav-header">Menu</li>
+          <li class="nav-divider"></li>
+          
+          
+           <li>
+            <a href="post_car.php">
+              <i class="fa fa-table"></i>
+              <span class="link-title">Home</span>            </a>          </li>
+          
+          <li>
+            <a href="profile.php">
+              <i class="fa fa-table"></i>
+              <span class="link-title">Profile</span>            </a>          </li>
+          
+          
+		  
+		  
+		   <li>
+            <a href="post_car.php">
+              <i class="fa fa-table"></i>
+              <span class="">Post Cars</span>            </a>          </li>
+		  
+		   <li>
+            <a href="post_adv.php">
+              <i class="fa fa-table"></i>
+              <span class="link-title">Advertisment</span>            </a>          </li>
+		  
+		   
+		  
+          <li>
+            <a href="maps.php">
+              <i class="fa fa-map-marker"></i><span class="link-title">
+            Maps
+          </span>            </a>          </li>
+          
+          <li>
+            <a href="calendar.php">
+              <i class="fa fa-calendar"></i>
+              <span class="link-title">
+            Calendar          </span>            </a>          </li>
+          
+          
+          
+          
+          
+          
+		  
+		   <li>
+            <a href="logout.php">
+              <i class="fa fa-table"></i>
+              <span class="link-title">Logout</span>            </a>          </li>
+        </ul><!-- /#menu -->
+      </div>
+	  <!--jQuery 2.1.1 -->
     <script src="assets/lib/jquery/jquery.min.js"></script>
 
     <!--Bootstrap -->
@@ -71,5 +135,5 @@ error_reporting(0);
     <!-- Metis demo scripts -->
     <script src="assets/js/app.min.js"></script>
     <script src="assets/js/style-switcher.min.js"></script>
-</body>
-</html>
+	  </body>
+	  </html>

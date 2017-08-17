@@ -1,5 +1,5 @@
 <?php
-
+include('controladv.php');
 include('header.php');
 error_reporting(0);
 
@@ -57,7 +57,7 @@ error_reporting(0);
   <body class="  ">
   <?php
   
-  include('sidebar.php');
+  include('csidebar.php');
   
   ?>
     <div class="bg-dark dk" id="wrap">
@@ -75,22 +75,44 @@ error_reporting(0);
                       <tbody>
                         
 						<tr>
-						<td>First Name </td>
-						<td> Last Name </td>
-						<td> Address </td>
-						<td> Phone </td>
-						<td> Gender </td>
-						<td> Email </td>
-						<td> Password </td>
-						<td> Birth Date </td>
-						<td> Category </td>
-						<td> Country </td>
-						<td> State </td>
-						<td> City </td>
-						<td> Edit </td>
-						<td> Delet </td>
+						<td> Name </td>
+						
+						<td> Image </td>
+						<td> Feature </td>
+						<td> Days</td>
+						<td><li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                  </li>  </td>
+						<td>  <li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-trash"></i>
+                  </li></td>
+						
+						
 						</tr>
-                       
+                       <?php
+					    foreach($r  as $adv)
+						{
+						?>
+						
+					 <tr>
+					 <td><?php echo $adv['adv_name']; ?></td>
+					  <td><img src="../uploadadv/<?php echo $adv['adv_image']; ?>" height="50px" width="50px"> </td>
+					   <td><?php echo $adv['adv_feature']; ?></td>
+					    <td><?php echo $adv['adv_days']; ?></td>
+						<td> <a href="post_adv.php?eid=<?php echo $adv['adv_id']; ?>">  <li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                  </li> </a></td>
+						<td> <a href="show_adv.php?did=<?php echo $adv['adv_id']; ?>"> <li class="col-sm-6 col-md-4 col-lg-3">
+                    <i class="glyphicon glyphicon-trash"></i>
+                  </li></a></td>
+						
+					 </tr>
+						<?php
+						
+						}
+						
+						?>
+					   
                       </tbody>
                     </table>
 					
