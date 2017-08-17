@@ -1,126 +1,151 @@
 <?php
+include_once('control.php');
 error_reporting(0);
+$i=$_SESSION['id'];
 ?>
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="UTF-8">
-    <title>CarPooling</title>
-
-    <!--IE Compatibility modes-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!--Mobile first-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
-
-    <!-- Metis core stylesheet -->
-    <link rel="stylesheet" href="assets/css/main.min.css">
-
-    <!-- metisMenu stylesheet -->
-    <link rel="stylesheet" href="assets/lib/metismenu/metisMenu.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-    <!--[if lt IE 9]>
-      <script src="assets/lib/html5shiv/html5shiv.js"></script>
-        <script src="assets/lib/respond/respond.min.js"></script>
-        <![endif]-->
-
-    <!--For Development Only. Not required -->
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>The Auto-Swift Website Template | Home :: w3layouts</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--slider-->
+<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script> 
+    <script type='text/javascript' src='js/camera.min.js'></script> 
+    
     <script>
-      less = {
-        env: "development",
-        relativeUrls: false,
-        rootpath: "../assets/"
-      };
-    </script>
-    <link rel="stylesheet" href="assets/css/style-switcher.css">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/less/theme.less">
-    <script src="assets/lib/less/less-1.7.5.min.js"></script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: true
+			});
 
-    <!--Modernizr 2.8.2-->
-    <script src="assets/lib/modernizr/modernizr.min.js"></script>
-  </head>
+			jQuery('#camera_wrap_2').camera({
+				height: '400px',
+				
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
+	<style type="text/css">
+	#link
+	{
+	   padding-left:65%;
+	   color:#990099;
+	}
+	#ca
+	{
+	    height:50px;
+		width:50px;
+		color:#FFFFFF;
+	}
+	</style>
+</head>
 <body>
-<div class="bg-dark dk" id="wrap">
-      <div id="top">
+<div class="h_bg">
+<div class="wrap">          
+<div class="wrapper">
+<div class="header">
+<div id="link">
 
-        <!-- .navbar -->
-        <nav class="navbar navbar-inverse navbar-static-top">
-          <div class="container-fluid">
-
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <header class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                <span class="sr-only">Toggle navigation</span> 
-                <span class="icon-bar"></span> 
-                <span class="icon-bar"></span> 
-                <span class="icon-bar"></span>              </button>
-              <a href="index.html" class="navbar-brand">
-                <img src="../logo/images (5).jpg" alt="" height="55" width="100">              </a>            </header>
-            
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-
-              <!-- .nav -->
-              <ul class="nav navbar-nav">
-                <li> <a href="post_car.php">Home</a>  </li>
-                <li> <a href="profile.php">Profile</a>  </li>
-                <li> <a href="contactus.php">Contact Us</a>  </li>
-				<li> <a href="logout.php">Logout</a>  </li>
-              </ul><!-- /.nav -->
-            </div>
-          </div><!-- /.container-fluid -->
-        </nav><!-- /.navbar -->
-        <header class="head">
-          <div class="search-bar">
-            <form class="main-search" action="">
-              <div class="input-group">
-                
-                              </div>
-            </form><!-- /.main-search -->
-          </div><!-- /.search-bar -->
-          <div class="main-bar">
-            <h3>
-              <i class="fa fa-home"></i>&nbsp; CarPooling</h3>
-          </div><!-- /.main-bar -->
-        </header><!-- /.head -->
-      </div><!-- /#top -->
-      
-        
-
-        <!-- #menu -->
-        <!-- /#menu -->
-      </div><!-- /#left -->
-      <!-- /#content -->
-      <!-- /#right -->
-    </div>
+ <a href="reg.php" > Registration </a> | <a href="createcarpool.php" > Create Carpool </a> | <a href="search.php"> Search </a> | <a href="profile.php?pr_id=<?php echo $i;?>"> Profile </a>|  <a href="package1.php"> Package </a> | <?php if($i>0)
+	  {
+	      ?>
+		  <a href="logout.php">Logout </a>
+	    <?php
+	  }
+	  
+	  else
+	  {
+	  ?>
+	   <a href="login.php">Login </a> 
+	   <?php
+	  }
+	  
+	   ?>
+	   </div>
+	<div class="logo">
 	
-	
-	 <!--jQuery 2.1.1 -->
-    <script src="assets/lib/jquery/jquery.min.js"></script>
-
-    <!--Bootstrap -->
-    <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- MetisMenu -->
-    <script src="assets/lib/metismenu/metisMenu.min.js"></script>
-
-    <!-- Screenfull -->
-    <script src="assets/lib/screenfull/screenfull.js"></script>
-
-    <!-- Metis core scripts -->
-    <script src="assets/js/core.min.js"></script>
-
-    <!-- Metis demo scripts -->
-    <script src="assets/js/app.min.js"></script>
-    <script src="assets/js/style-switcher.min.js"></script>
-</body>
-</html>
+		<img src="../logo/images (5).jpg"> <div id="ca">
+	CarPooling
+	</div> </a>
+		
+	</div>
+	<div class="cssmenu">
+	<ul>
+	   <li class="active"><a href="home.php"><span>Home</span></a></li>
+	    <li><a href=""><span>Cars</span></a>
+		
+		<ul>
+		 <?php
+					
+						?>
+	         <li class="has-sub"><a href="price.php"><span>By Price</span></a>
+	          <ul>
+			  
+	               <li>
+				   <?php
+				     foreach($see as $c)
+					 {
+				   ?>
+				   <a href="price.php?pid=<?php echo $c['car_price']; ?>"><span><?php echo $c['car_price'];?></span></a>
+				   <?php
+				   }
+				   ?></li>
+	              
+	            </ul>
+	         </li>
+			  <?php
+		  
+		  //}
+		  
+		  ?>
+	         <li class="has-sub"><a href="brand.php"><span>By Brand</span></a>
+	            <ul>
+	               <li> <?php
+				     foreach($see as $c)
+					 {
+				   ?>
+				   <a href="brand.php?bid=<?php echo $c['car_name']; ?>"><span><?php echo $c['car_name'];?></span></a>
+				   <?php
+				   }
+				   ?>	            
+	         </li>
+	      </ul>
+		 
+		<li class="has-sub"><a href="show_car.php"><span>All cars</span></a>
+	          
+	         </li>
+		</li>
+		
+	      </ul>
+		 
+		
+		</li>
+	      <li><a href="login.php"><span>Driver</span></a></li>
+	   <li class="has-sub"><a href="login.php"><span>Carowner</span></a>
+	      
+	   </li>
+	   <li class="last"><a href="contactus.php"><span>Contact</span></a></li>
+	   
+	 <div class="clear"></div>
+	 </ul>
+	</div>
+	<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>

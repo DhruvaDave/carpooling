@@ -18,8 +18,8 @@
 
 .left
 {
- margin-left:75%;
-  height:500px;
+ 
+  height:100px;
   width:25%;
  
   
@@ -45,7 +45,7 @@
 }
 #f
 {
-color:#FFFFFF;
+color:#000000;
 }
 </style>
 
@@ -60,7 +60,7 @@ color:#FFFFFF;
 
 <form name="tstest" method="post"  id="a">
 <p id="p"> Advertisment  </p>
-<marquee direction="down" height="750">
+<marquee direction="down" height="880">
 <table border="2" align="center">
 
 

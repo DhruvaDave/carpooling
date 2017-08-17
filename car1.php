@@ -27,7 +27,7 @@ error_reporting(0);
 	width:70%;
 	background:#FFFFFF;
 	border-style:groove
-	
+
    }
     
   #b
@@ -61,14 +61,12 @@ error_reporting(0);
 <tr>
 <td>Feature</td>
 <td>
-<div class="feature">
+<div class="feature" >
+
 </div>
 </td>
 </tr>
-<br>
-<tr>
-<td  colspan="2"><input type="button" name="readmore" value="Read More" id="b"/> </td>
-</tr>
+
 
 </div>
 </center>

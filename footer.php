@@ -1,75 +1,55 @@
 <?php
 error_reporting(0);
 ?>
-<!doctype html>
-<html class="no-js">
-  <head>
-    <meta charset="UTF-8">
-    <title>Car Pooling</title>
-
-    <!--IE Compatibility modes-->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <!--Mobile first-->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Bootstrap -->
-    <link rel="stylesheet" href="assets/lib/bootstrap/css/bootstrap.min.css">
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="assets/lib/font-awesome/css/font-awesome.min.css">
-
-    <!-- Metis core stylesheet -->
-    <link rel="stylesheet" href="assets/css/main.min.css">
-
-    <!-- metisMenu stylesheet -->
-    <link rel="stylesheet" href="assets/lib/metismenu/metisMenu.min.css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-
-    <!--[if lt IE 9]>
-      <script src="assets/lib/html5shiv/html5shiv.js"></script>
-        <script src="assets/lib/respond/respond.min.js"></script>
-        <![endif]-->
-
-    <!--For Development Only. Not required -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>Car Pooling</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Julius+Sans+One' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--slider-->
+<link href="css/camera.css" rel="stylesheet" type="text/css" media="all" />
+    <script type='text/javascript' src='js/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery.mobile.customized.min.js'></script>
+    <script type='text/javascript' src='js/jquery.easing.1.3.js'></script> 
+    <script type='text/javascript' src='js/camera.min.js'></script> 
+    
     <script>
-      less = {
-        env: "development",
-        relativeUrls: false,
-        rootpath: "../assets/"
-      };
-    </script>
-    <link rel="stylesheet" href="assets/css/style-switcher.css">
-    <link rel="stylesheet/less" type="text/css" href="assets/css/less/theme.less">
-    <script src="assets/lib/less/less-1.7.5.min.js"></script>
+		jQuery(function(){
+			
+			jQuery('#camera_wrap_1').camera({
+				thumbnails: true
+			});
 
-    <!--Modernizr 2.8.2-->
-    <script src="assets/lib/modernizr/modernizr.min.js"></script>
-  </head>
+			jQuery('#camera_wrap_2').camera({
+				height: '400px',
+				loader: 'bar',
+				pagination: false,
+				thumbnails: true
+			});
+		});
+	</script>
+</head>
+
 <body>
-<footer class="Footer bg-dark dker">
-      <p>2015 &copy; Dhruva  </p>
-    </footer><!-- /#footer -->
- <!--jQuery 2.1.1 -->
-    <script src="assets/lib/jquery/jquery.min.js"></script>
-
-    <!--Bootstrap -->
-    <script src="assets/lib/bootstrap/js/bootstrap.min.js"></script>
-
-    <!-- MetisMenu -->
-    <script src="assets/lib/metismenu/metisMenu.min.js"></script>
-
-    <!-- Screenfull -->
-    <script src="assets/lib/screenfull/screenfull.js"></script>
-
-    <!-- Metis core scripts -->
-    <script src="assets/js/core.min.js"></script>
-
-    <!-- Metis demo scripts -->
-    <script src="assets/js/app.min.js"></script>
-    <script src="assets/js/style-switcher.min.js"></script>
+<div class="footer_bg">
+<div class="wrap">
+<div class="wrapper">
+	<div class="footer">
+		<div class="copy">
+			<p class="w3-link">© All Rights Reserved | Design by Dhruva</p>
+		</div>
+		<div class="f_nav">
+		<ul>
+			
+		</ul>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+</div>
 </body>
 </html>

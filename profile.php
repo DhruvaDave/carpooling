@@ -1,7 +1,6 @@
 <?php
  include_once('control.php');
  include_once('header.php');
- include('csidebar.php');
  error_reporting(0);
  
  
@@ -56,16 +55,7 @@ $("#b1").mouseover(function() {
 </style>
 
 </head>
-
-<body class="  ">
-<div class="bg-dark dk" id="wrap">
-      <div id="top">
-	  
-	  <div id="content">
-        <div class="outer">
-          <div class="inner bg-light lter" style="padding:12%">
-            <div class="col-lg-12">
-
+<body>
  <br /> 
 
 <center>
@@ -121,20 +111,13 @@ $("#b1").mouseover(function() {
 
 
 <tr border="3" style="border:solid 3px #000000" id="f" align="center" width="100px" height="20px">
-<td colspan="2" align="center" > <a href="reg.php?eid1=<?php echo $prof['passenger_id'] ?>"> Edit </a>
+<td colspan="2" align="center" > <a href="reg.php?eid=<?php echo $prof['passenger_id'] ?>"> Edit </a>
                    </td>
 </tr>
 </table>
 </form>
 <br /> <br />
 </center>
-</div>
-					</div>
-					</div>
-					</div>
-					</div>
-					</div>
-					
 <?php
  include('footer.php');
 ?>

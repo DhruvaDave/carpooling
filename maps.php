@@ -1,8 +1,10 @@
 <?php
   include('header.php');
-  include('csidebar.php');
   error_reporting(0);
+ 
   ?>
+
+
 <!doctype html>
 <html class="no-js">
   <head>
@@ -51,21 +53,26 @@
     <!--Modernizr 2.8.2-->
     <script src="assets/lib/modernizr/modernizr.min.js"></script>
   </head>
+  
   <body class="  ">
+ 
     <div class="bg-dark dk" id="wrap">
       <div id="top">
 
         <!-- .navbar -->
-                  <!-- /.container-fluid -->
-       <!-- /.navbar -->
-       
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <!-- /.container-fluid -->
+        </nav><!-- /.navbar -->
+        <header class="head">
           <!-- /.search-bar -->
           <div class="main-bar">
             <h3>
               <i class="fa fa-map-marker"></i>&nbsp; Maps</h3>
           </div><!-- /.main-bar -->
-       
-	   <div id="content">
+        </header><!-- /.head -->
+      </div><!-- /#top -->
+      <!-- /#left -->
+      <div id="content">
         <div class="outer">
           <div class="inner bg-light lter">
             <style>
@@ -190,11 +197,7 @@
             </div><!-- /.row -->
           </div><!-- /.inner -->
         </div><!-- /.outer -->
-      </div>
-	   <!-- /.head -->
-      </div><!-- /#top -->
-      <!-- /#left -->
-      <!-- /#content -->
+      </div><!-- /#content -->
       <div id="right" class="bg-light lter">
         <div class="alert alert-danger">
           <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -248,7 +251,7 @@
         </div>
       </div><!-- /#right -->
     </div><!-- /#wrap -->
-    <!-- /#footer -->
+   <!-- /#footer -->
 
     <!-- #helpModal -->
     <div id="helpModal" class="modal fade">
@@ -295,8 +298,9 @@
       });
     </script>
     <script src="assets/js/style-switcher.min.js"></script>
-	<?php
+ <?php
   include('footer.php');
   ?>
+  
   </body>
 </html>

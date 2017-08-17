@@ -1,9 +1,8 @@
 <?php
-
-  include_once('header.php');
-
-  include_once('control.php');
-  error_reporting(0);
+ include('control.php');
+ include('header.php');
+ error_reporting(0);
+ 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -22,7 +21,6 @@
 	font-size:xx-large;
 	color:#0000FF;
 	font-family:forte;
-	margin:2%;
 	}
 	
 #f
@@ -40,70 +38,62 @@
 </style>
 
 </head>
+
 <body bgcolor="#FFFFFF">
 
+<div class="main">
 
 
-<div id="main" >
 
 
-<br /> <br />
+
 <form name="tstest" method="post">
 <center>
-<table border="2" align="center">
+<table border="2" align="center" style="margin-bottom:10%">
+
 
 <caption id="c"> Available Cars </caption>
+
 
 <tr border="3" style="border:solid 3px #000000" id="f">
 <td border="3" style="border:solid 3px #000000" id="f" align="center" width="100px" height="20px"> Name </td>
 <td border="3" style="border:solid 3px #000000" id="f" align="center"width="100px" height="20px"> Image </td>								
 <td border="3" style="border:solid 3px #000000" id="f" align="center" width="100px" height="20px">  Feature </td>
 <td border="3" style="border:solid 3px #000000" id="f" align="center" width="100px" height="20px"> Price </td>                      
-</tr>	
+</tr>					 <?php
+					 foreach($fcar1 as $c)
+					 {
+					 ?>
+				
+					 			<tr border="3" style="border:solid 3px #000000">
 
- <?php
-					 $se="select * from car";
-					$see=mysql_query($se);
-					//return $see;
-					  while($c=mysql_fetch_array($see))
-					  {
-						?>
-						
+<td border="3" style="border:solid 3px #000000" id="f1" height="20px"><?php echo $c['car_name']; ?></td> 
 
-						<tr>
-						 <td border="3" style="border:solid 3px #000000" id="f1" height="20px"><?php echo $c['car_name']; ?></td>
-						 <td border="3" style="border:solid 3px #000000" id="f1" height="20px"> <img src="<?php echo $c['car_image']; ?>" /></td> 
-						<td border="3" style="border:solid 3px #000000" id="f1" height="20px"><?php echo $c['car_feature']; ?></td> 
-						<td border="3" style="border:solid 3px #000000" id="f1" height="20px"><?php echo $c['car_price']; ?></td> 
-						</tr>
-								
-                        
+
+
+
+<td border="3" style="border:solid 3px #000000" id="f1" height="20px"> <img src="<?php echo $c['car_image']; ?>" />  </td>
+<td border="3" style="border:solid 3px #000000" id="f1" height="20px"><?php echo $c['car_feature']; ?></td> 
+
+<td border="3" style="border:solid 3px #000000" id="f1" height="20px"><?php echo $c['car_price']; ?></td>
+ </tr>
 						
-						
-					
-					 
-					 
-					 
-					
-					  
-					
-						
-						
-					 
 						<?php
 						
-						
 						}
+						
 						?>
-                      </tbody>
+					 
+						
                     </table>
                       
-<br /> <br />
+
 
 </form>
+</div>
 </center>
+</body>
+</html>
 <?php
  include('footer.php');
 ?>
-</body>
-</html>
